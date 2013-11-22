@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title></title>
+
+    <!-- <link href="jquery.w8n.css" rel="stylesheet" type="text/css"> -->
+    <link href="jquery.w8n.min.css" rel="stylesheet" type="text/css">
+
+    <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+    
+    <!-- <script src="jquery.w8n.js"></script> -->   
+    <script src="jquery.w8n.min.js"></script> 
+
+    <script>
+      $(function() {            
+        // Sample 1
+        $('#btnSample1').click(function(){
+          $.w8n('Default notification', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.');
+        });         
+        // Sample 2
+        $('#btnSample2').click(function(){
+          $.w8n('Timeout set to 1000', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.', {timeout: 1000});
+        });         
+        // Sample 3
+        $('#btnSample3').click(function(){
+          $.w8n('Sticky notification', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.', {timeout: 0});
+        });         
+      });
+    </script>    
+</head>
+<body>
+  <input type="button" id="btnSample1" value="Default"></input>  
+  <input type="button" id="btnSample2" value="Custom timeout"></input>  
+  <input type="button" id="btnSample3" value="Sticky"></input> 
+</body>
+</html>
