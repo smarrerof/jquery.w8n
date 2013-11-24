@@ -84,12 +84,9 @@
         }
     };
 
-
-    // wrapper since this plug-in is called without selecting an item first
+    // Called without selector
     $.w8n = function(title, message, options) {
-        // the plugin start here
-        
-        // create location
+        // Create container location
         if ($('.w8n-container').length === 0)
         {
             var $body = $('body');
@@ -105,7 +102,6 @@
 
     // plugin setup
     $.fn.w8n = function(message, options) {
-        //alert('$.fn.w8n');   
         return methods.init.apply(this, arguments);   
     };
 
